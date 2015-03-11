@@ -1,17 +1,17 @@
 
 public class Movie {
-	private int rank;
+	private String rank;
 	private String description;
 	
-	public Movie(int rank, String description) {
+	public Movie(String rank, String description) {
 		this.rank = rank;
 		this.description = description;
 	}
 	
-	public int getRank() {
+	public String getRank() {
 		return rank;
 	}
-	public void setRank(int rank) {
+	public void setRank(String rank) {
 		this.rank = rank;
 	}
 	public String getDescription() {
