@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Java8Test {
 
@@ -7,8 +9,11 @@ public class Java8Test {
 		// TODO Auto-generated method stub
 		System.out.println("Start java8 test program...");
 		
+		convert_list_to_map_with_java8_lambda();
+		
+		/*
 		List<String> myLists = new ArrayList<>();
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 100; i++) {
 			myLists.add("Test" + i);
 		}
 		
@@ -27,6 +32,19 @@ public class Java8Test {
 		long lambdaTime = System.currentTimeMillis() - startTime;
 		
 		System.out.println("Classic Time : " + classicTime + " ms, Lambda Time : " + lambdaTime + " ms");
+		*/
 	}
 
+	public static void convert_list_to_map_with_java8_lambda () {
+	    
+	    List<Movie> movies = new ArrayList<Movie>();
+	    movies.add(new Movie(1, "The Shawshank Redemption"));
+	    movies.add(new Movie(2, "The Godfather"));
+
+	    Map<Integer, Movie> mappedMovies = movies.stream().collect(
+	            Collectors.toMap(Movie::getRank, (p) -> p));
+
+	   System.out.println("first : " + mappedMovies.get(1).getDescription());
+	   System.out.println("second : " + mappedMovies.get(2).getDescription());
+	}
 }
