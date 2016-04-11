@@ -9,7 +9,7 @@ public class Java8Test {
 		// TODO Auto-generated method stub
 		System.out.println("Start java8 test program...");
 		
-		convert_list_to_map_with_java8_lambda();
+		convertListLambda();
 		
 		List<String> myLists = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {
@@ -33,7 +33,7 @@ public class Java8Test {
 		System.out.println("Classic Time : " + classicTime + " ms, Lambda Time : " + lambdaTime + " ms");
 	}
 
-	public static void convert_list_to_map_with_java8_lambda () {
+	public static void convertListLambda () {
 	    
 	    List<Movie> movies = new ArrayList<Movie>();
 	    movies.add(new Movie("1", "The Shawshank Redemption"));
