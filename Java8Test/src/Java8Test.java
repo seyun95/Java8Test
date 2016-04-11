@@ -11,7 +11,6 @@ public class Java8Test {
 		
 		convert_list_to_map_with_java8_lambda();
 		
-		/*
 		List<String> myLists = new ArrayList<>();
 		for (int i = 0; i < 100; i++) {
 			myLists.add("Test" + i);
@@ -32,7 +31,6 @@ public class Java8Test {
 		long lambdaTime = System.currentTimeMillis() - startTime;
 		
 		System.out.println("Classic Time : " + classicTime + " ms, Lambda Time : " + lambdaTime + " ms");
-		*/
 	}
 
 	public static void convert_list_to_map_with_java8_lambda () {
