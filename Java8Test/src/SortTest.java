@@ -16,6 +16,7 @@ public class SortTest {
 		    public int compare(File f1, File f2)
 		    {
 		    	int n = 1;
+		    	int R =1;
 		    	return String.valueOf(f1.getName()).compareTo(f2.getName());
 		        //return Long.valueOf(f1.lastModified()).compareTo(f2.lastModified());
 		    } });
